@@ -4,7 +4,7 @@ spring:
   application:
     name: mirco-user
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/SHOPMANAGER?characterEncoding=UTF8&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://172.31.128.1:3306/SHOPMANAGER?characterEncoding=UTF8&useSSL=false&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
@@ -17,6 +17,6 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://127.0.0.1:9008/eureka
+      defaultZone: http://172.31.128.1:9008/eureka
     instance:
       prefer-ip-address: true
