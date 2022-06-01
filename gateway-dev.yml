@@ -1,0 +1,45 @@
+server:
+  port: 9009
+spring:
+  application:
+    name: mirco-gateway
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/SHOPMANAGER?characterEncoding=UTF8&useSSL=false&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:9008/eureka
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+    mirco-user:
+      path: /mirco-user
+      service-id: mirco-user
+    mirco-shoppinglist:
+      path: /mirco-shoppinglist
+      service-id: mirco-shoppinglist
+    mirco-shopping:
+      path: /mirco-shopping
+      service-id: mirco-shopping
+    mirco-product:
+      path: /mirco-product
+      service-id: mirco-product
+    mirco-order:
+      path: /mirco-order
+      service-id: mirco-order
+    mirco-inventory:
+      path: /mirco-inventory
+      service-id: mirco-inventory
+    mirco-employee:
+      path: /mirco-employee
+      service-id: mirco-employee

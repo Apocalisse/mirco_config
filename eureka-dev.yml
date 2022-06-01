@@ -1,0 +1,16 @@
+server:
+  port: 9008
+spring:
+  application:
+    name: eureka-server
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/SHOPMANAGER?characterEncoding=UTF8&useSSL=false&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+eureka:
+  client:
+    fetchRegistry: false
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9008/eureka/
